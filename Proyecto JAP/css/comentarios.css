@@ -1,0 +1,72 @@
+.contenedor1 {
+    width: 600px;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.header2 {
+    background-color: rgb(46, 45, 45);
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+    padding: 08px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+   
+}
+
+.container-comments2:hover {
+    border-radius: 10px;
+    background-color: rgb(201, 192, 192);
+    margin-top: 20px;
+
+}
+
+.fechayhora {
+    text-align: right;
+}
+.descripcion {
+    margin-top: 03px;
+    margin-left: 03px;
+    margin-right: 03px;
+
+    padding: 25px;
+}
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.request2 {
+    cursor: pointer;
+}
+
+#rellenarComentario{
+height: 150px;
+}
+
+input[type="radio"] {
+    display: none;
+  }
+  
+  .auto {
+  color: gray;
+  }
+  
+  .clasificacion2 {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  font-size: 23px;
+  }
+  
+  .auto:hover,
+  .auto:hover ~ label {
+  color: yellowgreen; }
+  
+  input[type="radio"]:checked ~ label {
+  color: yellowgreen;
+  }

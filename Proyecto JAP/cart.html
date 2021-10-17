@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>eMercado - Todo lo que busques está aquí</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/album/"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/dropzone.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/carrito.css" />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Barra de navegacion -->
+    <nav class="site-header sticky-top py-1 bg-dark">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between"
+      >
+        <a class="btn btn-outline-light" href="index.html"
+          ><i class="fas fa-dungeon mr-1"></i> Inicio</a
+        >
+        <a class="btn btn-outline-light" href="categorieslogin.html"
+          ><i class="fas fa-folder-open mr-1"></i> Categorías</a
+        >
+        <a class="btn btn-outline-light" href="productslogin.html"
+          ><i class="fas fa-car mr-1"></i> Productos</a
+        >
+        <a class="btn btn-outline-light" href="sell.html"
+          ><i class="fas fa-handshake mr-1"></i> Vender</a
+        >
+        <a class="btn btn-outline-light" href="cart.html"
+          ><i class="fas fa-dolly mr-1"></i> Mi carrito</a
+        >
+        <div id="nombre"></div>
+        <!-- -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Artículos -->
+      <table id="tituloTabla">
+        <th class="marcoTabla">Imagen</th>
+        <th class="marcoTabla">Nombre</th>
+        <th class="marcoTabla">Costo</th>
+        <th class="marcoTabla">Cantidad</th>
+        <th class="marcoTabla">Subtotal</th>
+        <tbody id="carro"></tbody>
+      </table>
+
+      <!-- Dirección -->
+      <div class="direccion">
+        <div class="input-group mb-3">
+          <h4>Calle:</h4>
+          <input
+            type="text"
+            class="form-control ml-3"
+            aria-label="Sizing example input"
+            aria-describedby="calle"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <h4>Número de Puerta:</h4>
+          <input
+            type="text"
+            class="form-control ml-3"
+            aria-label="Sizing example input"
+            aria-describedby="num-puerta"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <h4>Esquina:</h4>
+          <input
+            type="text"
+            class="form-control ml-3"
+            aria-label="Sizing example input"
+            aria-describedby="esq"
+          />
+        </div>
+      </div>
+
+      <!-- Tipo de envío -->
+      <div class="dropdown-divider-cart"></div>
+      <div class="container">
+        <h4 class="mt-4 titulo">Tipo de envío:</h4>
+        <div class="row">
+          <div class="col-1"></div>
+
+          <div class="col-10" style="text-align: center">
+            <div class="btn-group btn-group-toggle mb-2" data-toggle="buttons">
+              <label class="btn btn-green" id="tipo-envio-p">
+                <input
+                  type="radio"
+                  name="envio-precio"
+                  autocomplete="off"
+                  value="0.15"
+                />Premium 2 a 5 días (15%)
+              </label>
+
+              <label class="btn btn-green" id="tipo-envio-e">
+                <input
+                  type="radio"
+                  name="envio-precio"
+                  autocomplete="off"
+                  value="0.07"
+                />Express 5 a 8 días (7%)
+              </label>
+              <label class="btn btn-green" id="tipo-envio-s">
+                <input
+                  type="radio"
+                  name="envio-precio"
+                  autocomplete="off"
+                  value="0.05"
+                />Standard 12 a 15 días (5%)
+              </label>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+      <!-- Total -->
+      <div class="dropdown-divider-cart"></div>
+
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="card" style="width: 100%">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item">
+                <div class="row">
+                  <div class="col-7">
+                    <p class="mt-2" style="text-align: start; font-size: 1.5em">
+                      Carrito
+                    </p>
+                  </div>
+                  <div class="col-2" id="mon"></div>
+                  <div class="col-3">
+                    <div
+                      class="justify-content-end"
+                      id="tot-art"
+                      style="text-align: right"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="row">
+                  <div class="col-7">
+                    <p class="mt-2" style="text-align: start; font-size: 1.5em">
+                      Envío
+                    </p>
+                  </div>
+                  <div class="col-2" id="mone"></div>
+                  <div class="col-3">
+                    <div class="justify-content-end" id="tot-envio"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="row">
+                  <div class="col-7">
+                    <p
+                      class="mt-2"
+                      style="
+                        text-align: start;
+                        font-size: 1.5em;
+                        font-weight: 600;
+                      "
+                    >
+                      Total
+                    </p>
+                  </div>
+                  <div class="col-2" id="mont"></div>
+                  <div class="col-3">
+                    <div class="justify-content-end" id="total-total"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      <!-- Forma de pago -->
+      <div class="dropdown-divider-cart"></div>
+      <h4>Forma de pago:</h4>
+      <div class="row ml-5">
+        <p>No se ha seleccionado una forma de pago.</p>
+        <a href="" class="ml-2">Seleccionar.</a>
+      </div>
+      <div class="row mb-4">
+        <div class="col-4"></div>
+        <div class="col-4" style="text-align: center">
+          <button type="button" class="btn btn-danger" id="comprar">
+            Finalizar compra
+          </button>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

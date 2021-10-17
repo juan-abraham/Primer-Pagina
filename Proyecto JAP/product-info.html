@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/comentarios.css">
+  
+</head>
+
+<body> <!-- Barra de navegacion -->
+  <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="btn btn-outline-light" href="index.html"><i class="fas fa-dungeon mr-1"></i> Inicio</a>
+      <a class="btn btn-outline-light" href="categorieslogin.html"><i class="fas fa-folder-open mr-1"></i> Categorías</a>
+      <a class="btn btn-outline-light" href="productslogin.html"><i class="fas fa-car mr-1"></i> Productos</a>
+      <a class="btn btn-outline-light" href="sell.html"><i class="fas fa-handshake mr-1"></i> Vender</a>
+      <a class="btn btn-outline-light" href="cart.html"><i class="fas fa-dolly mr-1"></i> Mi carrito</a>
+      <div id="nombre" ></div> <!-- -->
+      
+    </div>
+  </nav>
+  <main role="main">
+    <div class="container mt-5">
+    <h3 id="productName"></h3>
+      <hr class="my-3">
+
+      <div class="row">
+        <div class="col-3">
+          <dt>Descripción</dt>
+          <dd>
+            <p id="productDescription"></p>
+          </dd>
+        </div>
+        <div class="col-6"> <!--CARRUSEL-->
+          <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
+            <ol class="carousel-indicators" id="listaLineas"></ol>
+            <div class="carousel-inner" id="productImagesGallery">
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+        </div> <!--FINAL DEL CARRUSEL-->
+          <div class="col-3">
+            <dt>Cantidad de autos vendidos hastal a fecha</dt>
+        <dd>
+          <p id="soldCount"></p>
+        </dd>
+
+        <dt>Precio final</dt>
+        <dd>
+          <p id="valorAutos"></p>
+        </dd>
+        </div>
+      <dl>  
+      </div>
+       <!-- PRODUCTOS RELACIONADOS-->
+        <div id='productos-relacionados'>
+          
+           </div>
+          <br>
+
+<!-- Botones de ordenamiento de comentarios -->
+<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+  <label class="btn btn-light" id="sortDescScore" >
+    <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-angle-double-up mr-1 ml-1 checkedgrey ">
+      <i class="fa fa-car checkedred mr-1 ml-1" ></i></i>
+  </label>
+  <label class="btn btn-light" id="sortAscScore" >
+    <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-angle-double-down mr-1 ml-1 checkedgrey ">
+      <i class="fa fa-car checkedred mr-1 ml-1" ></i></i>
+  </label>
+  <label class="btn btn-light" id="sortDescTime" >
+    <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-angle-double-up mr-1 ml-1 checkedgrey">
+      <i class="fa fa-clock checkedred mr-1 ml-1" ></i></i>
+  </label>
+  <label class="btn btn-light" id="sortAscTime" >
+    <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-angle-double-down mr-1 ml-1 checkedgrey">
+      <i class="fa fa-clock checkedred mr-1 ml-1" ></i></i>
+  </label>
+</div>
+<!-- Fin botones de ordenamiento de comentarios -->
+
+          <div class="btn btn-light btn-lg btn-block">
+
+            COMENTARIOS
+           
+            <main class="contenedor1">
+              <hr class="line">
+              <div class="contenedor1">
+       <div class="container-comments2">
+          
+           <div class="comments2">
+              
+                            
+               <div class="info-comments2">
+                  
+                   <div class="header2">
+                       <h4 id="nombreComentario"><i class="fas fa-user-astronaut mr-1"></i></h4> <!-- NOMBRE DE USUARIO-->
+                       <p class="ml-2 clasificacion2"> 
+                        <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                        --><label for="radio1" class="auto"><i class="fa fa-car mr-1"></i></label><!--
+                        --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                        --><label for="radio2" class="auto"><i class="fa fa-car mr-1 "></i></label><!--
+                        --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                        --><label for="radio3"class="auto"><i class="fa fa-car mr-1 "></i></label><!--
+                        --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                        --><label for="radio4"class="auto"><i class="fa fa-car mr-1 "></i></label><!--
+                        --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                        --><label for="radio5"class="auto"><i class="fa fa-car mr-1 "></i></label>
+                      </p>  <!-- LUGAR PARA HACER LA CALIFICACION-->
+                   </div>
+                   
+                   <textarea class="form-control" type ="text" id="rellenarComentario" placeholder="Escribiendo..." autocomplete="off"></textarea>
+                <!-- LUGAR PARA HACER COMENTARIO-->
+                 
+                   
+                       <button class="btn btn-dark" id="agregar"> Hacer comentario </button>
+
+                 
+               </div>
+               
+           </div>
+       </div>
+       </div>
+
+       
+
+
+       </main>    
+          </div>
+          <main id="comentarios2"></main> <!-- tabla donde se agrega comentario -->
+          <div class="list-group" id="comentarios"></div> <!-- Tabla de comentarios de JSON -->
+        </dd>
+      </dl>
+
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
+    </div>
+  </main>
+  
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+  
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/product-info.js"></script>
+  <script src="js/comentarios.js"></script>
+  <script src="js/agregarComentario.js"></script>
+  <script>
+      let usuario = JSON.parse ( localStorage.getItem("usuario"));
+      document.getElementById('nombreComentario').innerHTML=`<i class="fas fa-user-astronaut mr-1">   ` + usuario.nombre;
+  </script>
+</body>
+
+</html>
