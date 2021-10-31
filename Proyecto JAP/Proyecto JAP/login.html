@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/album/"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <link href="css/stilologin.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/googlestile.css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <meta
+      name="google-signin-client_id"
+      content="1057255686980-e3g9gr0j36gvthf0bj890hglbh0am3hi.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- esto es parqe funcione el boton de google pero no funciona-->
+  </head>
+  <body>
+    <!-- BARRA DE TAREAS-->
+    <nav class="site-header sticky-top py-1 bg-dark">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between"
+      >
+        <a class="btn btn-outline-light" href="index.html"
+          ><i class="fas fa-dungeon mr-1"></i> Inicio</a
+        >
+        <a class="btn btn-outline-light" href="categories.html"
+          ><i class="fas fa-folder-open mr-1"></i> Categorías</a
+        >
+        <a class="btn btn-outline-light" href="products.html"
+          ><i class="fas fa-car mr-1"></i> Productos</a
+        >
+        <!--- <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a> -->
+      </div>
+    </nav>
+    <div class="login-page">
+      <div class="form">
+        <p class="message" id="cabecera">Para comprar tenés que conectarte !</p>
+        <br />
+        <form class="login-form">
+          <input type="text" id="user" placeholder="Usuario" />
+          <input type="password" id="contra" placeholder="Clave" />
+          <button type="button" id="conectar" onclick="verificar()">
+            Entrar</button
+          ><!-- Boton que me manda a la pagina inicio -->
+          <br />
+          <br />
+          <div
+            class="g-signin2"
+            data-onsuccess="onSignIn"
+            data-theme="dark"
+          ></div>
+          <!-- Boton de google QUE NO FUNCIONA -->
+          <label>
+            <input type="checkbox" value="remember-me" id="recordarme" />
+            Recordarme
+            <!-- aun no tiene funcionalidad -->
+          </label>
+          <p class="message">
+            No estas registrado? <a href="#">es fácil hacelo !</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/google.js"></script>
+</html>
