@@ -209,3 +209,17 @@ a.custom-card:hover {
 .show > .btn-green.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem greenyellow;
 }
+
+.datos {
+  width: 1000px;
+}
+
+.cuadrado {
+  width: 150px;
+  height: 150px;
+  border: solid;
+  border: 2px;
+  border-color: black;
+  background-color: rgb(150, 150, 150);
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 body {
-  background-image: url("/img/fondoCarrito2.jpg");
+  background-image: url("../img/fondoCarrito2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Raleway", serif;
@@ -39,4 +39,26 @@ img {
   border: solid;
   border-width: 2px;
   border-color: white;
+}
+
+.contenedor-btn {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.final {
+  width: 300px;
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border: solid;
+}
+
+.pagos {
+  width: 215px;
+  text-align: center;
+  margin: auto;
+}
+.btnPago {
+  text-align: center;
 }
